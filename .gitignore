@@ -1,0 +1,5 @@
+/.idea/
+# IntelliJ specific configurations
+/config/
+# Store your DB credentials in this file for secure referencing.`
+/target/
