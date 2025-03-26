@@ -1,70 +1,97 @@
-# Connection Management App
+# Connection Management
 
-This is a Java-based connection management app that allows users to manage, create, and view information about various persons in the database, such as recruiters and companies. It uses JDBC to interact with a PostgreSQL database.
+**Connection Management** is a Java application designed to manage and track professional connections. It allows users to organize contact details, such as recruiters, companies, and peers, while maintaining communication history and follow-up schedules.
 
-# Features
+---
 
-Add new persons with attributes like name, email, company, and position.
-View records based on specific criteria, such as last name.
-Interaction via a command-line interface.
-Dependencies/Requirements
+## 📈 Features
 
-This project uses Maven to manage dependencies. You can easily set it up by following the steps below:
+- 📥 Manage professional connections (recruiters, companies, peers).
+- ⚙️ Add, update, and view connection information.
+- 🗓️ Track communication history and next follow-up dates.
+- 📋 Store contact details like email, phone number, and LinkedIn profile.
+- 🖥️ CLI-based application with simple interaction.
 
-Ensure Maven is installed on your system.
-Place the pom.xml file in your project root.
-Run the following command to download and set up all dependencies:
-mvn clean install
+---
 
-# Required Libraries/Installations:
+## 🛠️ Tech Stack
 
-PostgreSQL
+- Java 11+
+- PostgreSQL
+- Maven
+- JUnit (for testing)
+- JDBC (for database interaction)
 
-PGSQL JDBC Driver
+---
 
-Apache Commons Configuration (for working with property files)
+## 📦 Installation
 
-Maven will automatically handle downloading and managing these dependencies.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sambriggs262/ConnectionManagement.git
+   cd ConnectionManagement
+   ```
 
-PGAdmin 4 - not required, but highly recommended for troubleshooting.
+2. Build the project using Maven:
+   ```bash
+   mvn clean install
+   ```
 
-# Installation
+3. Configure your PostgreSQL database by updating `application.properties` with your database credentials.
 
-Clone this repository:
-git clone https://github.com/sambriggs262/connectionmanagement.git
+4. Run the application:
+   ```bash
+   mvn exec:java
+   ```
 
-Navigate to the project directory:
-cd connectionmanagement
+5. Start managing your connections through the CLI.
 
-Configure the database settings in the config/properties.config file.
-Build the project with Maven:
-mvn clean install
+---
 
-# Usage
+## 🚀 Usage
 
-To run the app, use the following command:
+The application allows you to interact with your connections through the CLI:
 
-java -jar target/connectionmanagement-1.0-SNAPSHOT.jar
+- Add a new connection:
+    ```java
+    ConnectionManager.addConnection("John Doe", "john.doe@email.com", "Recruiter", "LinkedIn URL");
+    ```
+- View all connections:
+    ```java
+    ConnectionManager.viewConnections();
+    ```
 
-Once the app is running, you can interact with it using the following commands:
+---
 
-CREATE: Add a new Person to the database.
-VIEW: Retrieve and display a Person's information by last name.
-q: Terminate app.
+## 📁 Project Structure
 
-# Update 12/17/2024 (v1.0.1)
-- User-Friendly GUI: Added a Swing-based graphical user interface (GUI) for improved usability and intuitive navigation.
+```
+ConnectionManagement/
+├── src/
+│   ├── main/java/com/connectionsapp/   # Application logic and database interaction
+│   └── resources/                      # Configuration files (application.properties)
+├── target/                            # Maven build output
+├── pom.xml                            # Maven dependencies and project configuration
+├── .gitignore                         # Git exclusions
+└── README.md                          # You're here
+```
 
-- Improved Project Structure: Refactored and organized the file structure to follow industry best practices.
+---
 
-- File Packaging: Packaged files to maintain clarity and modularity.
+## 📜 License
 
-- Cloud Integration: Migrated the backend PostgreSQL database to AWS RDS for scalability and accessibility.
+This project is open source and available under the MIT License.
 
-# Future Updates
-- Transition from proof-of-concept to production-ready application.
-- Enhanced, production-ready GUI: Clean, minimalist GUI, possibly with JavaFX.
-- Implement secure user data storage and retrieval using AWS RDS.
-- Scalability Enhancements: Optimize database performance for handling multiple users concurrently.
-- Security: Enforce robust security measures, including encryption of sensitive data and secure database connections.
-- Deployment: Explore deploying the application for real-world use, ensuring AWS infrastructure is configured for reliability and cost efficiency.
+---
+
+## 👤 Author
+
+**Sam Briggs**
+[GitHub](https://github.com/sambriggs262) • [LinkedIn](https://linkedin.com/in/sam-briggs-8a825b327)
+
+---
+
+## 💡 Notes
+
+- This application is designed as a personal project to help manage professional connections.
+- Consider adding more advanced features like user authentication or a GUI for better usability.
