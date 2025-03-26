@@ -1,6 +1,6 @@
-# Connection Management
+# Scalable Phonebook
 
-**Connection Management** is a Java application designed to manage and track professional connections. It allows users to organize contact details, such as recruiters, companies, and peers, while maintaining communication history and follow-up schedules.
+**Scalable Phonebook** is a Java application designed to manage and track professional connections. It allows users to organize contact details, such as recruiters, companies, and peers, while maintaining communication history and follow-up schedules.
 
 ---
 
